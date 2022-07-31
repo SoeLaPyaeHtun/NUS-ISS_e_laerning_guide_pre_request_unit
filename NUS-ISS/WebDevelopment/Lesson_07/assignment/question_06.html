@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 06</title>
+</head>
+<style>
+    table {
+
+        padding-top: 10px;
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    td {
+        width: 50%;
+        border-radius: 3px;
+    }
+
+    #error {
+        font-family: Mouse Memoirs;
+        font-size: 14pt;
+        color: red;
+    }
+
+    #output {
+        font-size: 14pt;
+    }
+</style>
+
+<script>
+    function formValid() {
+
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var male = document.getElementById("male");
+        var female = document.getElementById("female");
+        var phone = document.getElementById("phone").value;
+        var reading = document.getElementById("reading");
+        var sports = document.getElementById("sports");
+        var movies = document.getElementById("movies");
+        var travelling = document.getElementById("travelling");
+        var output = document.getElementById("output");
+        var error = document.getElementById("error");
+
+        var result = "";
+        markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        for (var checkbox of markedCheckbox) {
+            result += checkbox.value + ' ';
+        }
+
+        if (name == "" || name.length > 15) {
+            error.value = "Name should not be blank and no more than 15 letters long";
+        } else if (age.length == 0) {
+            error.value = "Age should not be blank";
+        } else if (isNaN(age)) {
+            error.value = "Age should be numeric";
+        } else if (Number(age) < 0) {
+            error.value = "Age should not be negative number";
+        } else if (male.checked) {
+            output.value = "Your Name is " + name + "\n" + "You are " + age + " years Old" + "\n" + "Gender:" + male
+                .value + "\n"+ "Your Phone number is "  + phone + "\n" + "Hobbies are " + result;
+            error.value = "";
+        } else if (female.checked) {
+            output.value = "Your Name is " + name + "\n" + "You are " + age + " years Old" + "\n" + "Gender:" + female
+                .value + "\n" + "Your Phone number is " + phone + "\n" + "Hobbies are " + result;
+            error.value = "";
+        } else {
+            error.value = "Gender must be selected (cannot leave both blank)."
+        }
+
+    }
+</script>
+
+<body>
+    <table>
+
+        <tr>
+
+            <td class="label">
+                <p><label for="name">Name: </label></p>
+            </td>
+            <td class="input"><input type="text" id="name" name="name" size="50"></td>
+
+        </tr>
+        <tr>
+
+            <td class="label">
+                <p><label for="age">Age: </label></p>
+            </td>
+            <td class="input"><input type="text" id="age" name="age" size="50"></td>
+
+        </tr>
+        <tr>
+
+            <td class="label">
+                <p><label for="Gender">Gender: </label></p>
+            </td>
+            <td class="input">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">MALE</label>&ensp;&ensp;
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">FEMALE</label>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td class="label">
+                <p><label for="phone">Phone: </label></p>
+            </td>
+            <td class="input"><input type="tel" id="phone" name="phone" size="50"></td>
+
+        </tr>
+
+        <tr>
+
+            <td class="label">
+                <p><label for="hobbies">Hobbies: </label></p>
+            </td>
+            <td class="input">
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading">Reading</label>&ensp;
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                <label for="sports">Sports</label>&ensp;
+                <input type="checkbox" id="movies" name="hobbies" value="movies">
+                <label for="movies">Movies</label>&ensp;
+                <input type="checkbox" id="travelling" name="hobbies" value="travelling">
+                <label for="travelling">Travelling</label>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="label"><input type="submit" value="submit" id="btn" onclick="formValid()"></td>
+            <td class="input"></td>
+
+        </tr>
+
+        <tr>
+            <td class="label"></td>
+            <td class="input"></td>
+
+        </tr>
+
+        <tr>
+            <td class="label"><label for="output">Output: </label></td>
+            <td class="input"></td>
+        </tr>
+        <tr>
+
+            <td class="label"></td>
+            <td class="input"><textarea id="output" name="output" style="height:150px; width:400px;"></textarea></td>
+
+        </tr>
+
+        <tr>
+            <td class="label"><label for="error">Error: </label></td>
+            <td class="input"></td>
+        </tr>
+        <tr>
+
+            <td></td>
+            <td><textarea id="error" name="error" style="height:120px; width:400px;"></textarea></td>
+
+        </tr>
+
+    </table>
+</body>
+
+</html>
