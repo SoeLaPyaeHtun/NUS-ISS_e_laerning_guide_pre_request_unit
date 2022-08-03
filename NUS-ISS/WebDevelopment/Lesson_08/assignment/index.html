@@ -17,6 +17,22 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+table.nav {
+  overflow: hidden;
+  background-color:antiquewhite;
+  padding: 5px 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+}
+
+td.nav{
+  width: 25%;
 }
 
 .header a {
@@ -60,17 +76,83 @@ body {
     float: none;
   }
 }
+
+table.cart{
+
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th.cart{
+  border: 1px solid black;
+  padding: 10px;
+  width: 18px;
+}
+h2.cart{
+  text-align: center;
+}
+.count{
+  width: 30%;
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <a href="#default" class="logo">CompanyName</a>
   <div class="header-right">
     <a href="#login">Log In</a>
     <a href="#singup">Sign Up</a>
   </div>
 </div>
+<table class="nav">
+  <tr>
+    <td class="nav">Phone</td>
+    <td class="nav">Computer</td>
+    <td class="nav">Gaming peraphral</td>
+    <td class="nav">Phone Accessorial</td>
+   
+  </tr>
+</table>
+<br>
+<h2 class="cart">CART</h2>
+<table class="cart">
+  <tr>
+    <th class="cart">image</th>
+    <th class="cart">product</th>
+    <th class="cart">price</th>
+    <th class="cart">quantity</th>
+    <th class="cart">total</th>
+    <th class="cart">remove</th>
+  </tr>
+  <tr>
+    <td class="cart"><img src="photo1.png" alt="" width="150px" height="100px"></td>
+    <td class="cart">Samsung Galaxy Flip 3</td>
+    <td class="cart">$165</td>
+    <td class="cart"><input type="number" class="count"></td>
+    <td class="cart">h</td>
+    <td class="cart"><button>x</button></td>
+  </tr>
+  <tr>
+    <td class="cart"><img src="photo2.png" alt="" width="150px" height="100px"></td>
+    <td class="cart">Samsung Galaxy Flip 3 cover</td>
+    <td class="cart">$35</td>
+    <td class="cart"><input type="number" class="count" id="count"></td>
+    <td class="cart"><p id="totalPirce"></p></td>
+    <td class="cart"><button>x</button></td>
+  </tr>
+</table>
 
 </body>
+<script>
+    price = document.getElementById(count).val;
+    totalPrice = price * 166;
+    document.getElementById(totalPrice) = totalPrice;
+</script>
 </html>
