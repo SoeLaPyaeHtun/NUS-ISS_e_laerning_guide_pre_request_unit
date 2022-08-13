@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignmnet 8</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="#default" class="logo"><img src="logo.png" alt="" width="158" height="25"></a>
+    <div class="header-right">
+      <a href="#login">Log In</a>
+      <a href="#singup">Sign Up</a>
+    </div>
+  </div>
+  <table class="nav">
+    <tr>
+      <td class="nav">Phone</td>
+      <td class="nav">Computer</td>
+      <td class="nav">Gaming peraphral</td>
+      <td class="nav">Phone Accessorial</td>
+
+    </tr>
+  </table>
+  <br>
+  <h2 class="cart">CART</h2>
+  <table class="cart">
+    <tr>
+      <th class="cart">image</th>
+      <th class="cart">product</th>
+      <th class="cart">price</th>
+      <th class="cart">quantity</th>
+      <th class="cart">total</th>
+      <th class="cart">remove</th>
+    </tr>
+    <tr id="first">
+      <td class="first"><img src="photo.png" alt="" width="150px" height="100px"></td>
+      <td class="first">Samsung Galaxy Flip 3</td>
+      <td class="first">$799</td>
+      <td class="first"><input type="number" class="count" id="count1" value="1" min="0"></td>
+      <td class="first" id="cart-price-one"></td>
+      <td class="first"><button onclick="toRemoveItemA()">x</button></td>
+    </tr>
+    <tr id="second">
+      <td class="second"><img src="photo2.png" alt="" width="150px" height="100px"></td>
+      <td class="second">Samsung Galaxy Flip 3 cover</td>
+      <td class="second">$35</td>
+      <td class="second"><input type="number" class="count" id="count2" value="1" min="0"></td>
+      <td class="second" id="cart-price-two"></td>
+      <td class="second"><button onclick="toRemoveItemB()">x</button></td>
+    </tr>
+
+  </table>
+  <table>
+    <tr style="height: 10px;">
+      <td></td>
+    </tr>
+  </table>
+
+  <table class="totalPrice">
+    <tr>
+      <td><button class="two" onclick="updateCart()" id="updatebtn">Update Cart</button>
+        <button class="two">Continue Shopping</button></td>
+
+      <td>
+        <h2 style="padding-right:10px;">CART TOTAL</h2>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+
+      <td>
+        <span style="text-align:left;font-size: 24px;">SubTotal: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="spanOne" id="spanOne"></span>
+      </td>
+
+    </tr>
+
+    <tr style="height: 10px;">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+
+      <td>
+        <span style="text-align:left;font-size: 24px;">Shipping: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="spanOne">Free</span>
+      </td>
+
+    </tr>
+
+    <tr style="height: 10px;">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+
+      <td>
+        <span style="text-align:left;font-size: 24px;">TOTAL: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <span class="spanOne" id="spanTwo"></span>
+      </td>
+
+    </tr>
+    <tr style="height: 15px;">
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="two" onclick="updateCart()" style="float:right;">Proceed Checkout</button></td>
+
+    </tr>
+    <tr style="height: 15px;">
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table class="footer">
+
+    <tr>
+      <td colspan="2" class="tf">Copyright@2022 NUS_ISS <br><br>
+        <a href="" class="footer">Legal Stuff</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="footer">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="footer">Security</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+
+
+  </table>
+
+  </table>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

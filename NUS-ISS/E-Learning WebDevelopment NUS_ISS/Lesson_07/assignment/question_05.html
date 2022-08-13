@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 05</title>
+        <style>
+            table{
+                border-collapse: collapse;
+                border: 1px solid black;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+            }
+            th,td{
+                width: 25%;
+                border: 1px solid black;
+            }
+            th{
+                background-color: aliceblue;
+                font-size: 18pt;
+                height: 70px;
+            }
+            td{
+                text-align: center;
+                font-size: 16pt;
+                height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+     <script>
+                function suqareIt(x){
+                    return x * x;
+                }
+
+                function dividedIt(x){
+                    return x / 2;
+                }
+
+                function sqRootIt(x){
+                    return Math.sqrt(x);
+                }
+
+                document.write("<table>");
+                    document.write("<tr><th>x</th><th>x2</th><th>1/x</th><th>sq of x</th></tr>")
+                for(var i=1; i <6; i++){
+                    document.write("<tr>")
+                        document.write("<td>"+i+"</td>")
+                        document.write("<td>"+suqareIt(i)+"</td>")
+                        document.write("<td>"+dividedIt(i)+"</td>")
+                        document.write("<td>"+sqRootIt(i).toFixed(3)+"</td>")
+                }
+
+            </script>
+
+
+
+</html>

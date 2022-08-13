@@ -1,0 +1,83 @@
+body{
+    background-color: aliceblue;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.pinfo{
+   text-align: center;
+
+}
+
+.himg{
+    text-align: right;
+    padding-right: 20px;
+    width: 45%;
+    padding-bottom: 20px;
+}
+.hname{
+    color: black;
+    padding-right: 300px;
+    font-size: 30pt;
+}
+
+p{
+    font-size: 18pt;
+}
+
+
+
+.label{
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+
+}
+
+
+.resize{
+    width:347px;
+    height:31px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    
+}
+
+input {
+    line-height: 25px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    
+}
+
+.sbutton{
+    width:347px;
+    height:31px;
+    background-color: #FF7001;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.tf {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 12pt;
+  background-color: #FF7001;
+  color: white;
+}
+
+a{
+   
+    color: white;
+}
